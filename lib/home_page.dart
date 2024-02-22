@@ -35,18 +35,21 @@ void dispose() {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
-        child: Container(
-          width: 250,
-          height: 250,
-          decoration: BoxDecoration(
-            image: const DecorationImage(image: AssetImage('image/meme.jpg')),
-            borderRadius: BorderRadius.circular(15),
-            border: GradientBoxBorder(
-              width: 3,
-              gradient: LinearGradient(colors: [
-                Colors.pink[400]!,
-                Colors.yellow,
-              ]),
+        child: GestureDetector(
+          onTap: _playAnthem,
+          child: Container(
+            width: 250,
+            height: 250,
+            decoration: BoxDecoration(
+              image: const DecorationImage(image: AssetImage('image/meme.jpg')),
+              borderRadius: BorderRadius.circular(15),
+              border: GradientBoxBorder(
+                width: 3,
+                gradient: LinearGradient(colors: [
+                  Colors.pink[400]!,
+                  Colors.yellow,
+                ]),
+              ),
             ),
           ),
         ),
